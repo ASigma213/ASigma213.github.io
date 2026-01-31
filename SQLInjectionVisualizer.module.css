@@ -1,0 +1,123 @@
+.section {
+  padding: 2rem;
+  border-top: 1px solid rgba(0, 255, 65, 0.15);
+}
+
+.heading {
+  font-size: 1.25rem;
+  color: var(--crt-amber);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.codePanel {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 255, 65, 0.06);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.15);
+  font-size: 0.85rem;
+}
+
+.fixBtn {
+  padding: 0.35rem 0.75rem;
+  background: var(--crt-amber);
+  color: var(--crt-bg);
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+  transition: box-shadow 0.2s, transform 0.1s;
+}
+
+.fixBtn:hover {
+  box-shadow: 0 0 12px var(--crt-amber);
+  transform: scale(1.02);
+}
+
+.pre {
+  padding: 1rem;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.func {
+  color: var(--crt-green);
+}
+
+.vulnLine {
+  color: var(--vuln-red);
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.safeLine {
+  color: var(--safe-green);
+}
+
+.line {
+  color: var(--crt-green);
+}
+
+.comment {
+  color: var(--crt-amber);
+  opacity: 0.9;
+}
+
+.tooltip {
+  padding: 0.75rem 1rem;
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--crt-amber);
+  background: rgba(255, 176, 0, 0.08);
+  border-top: 1px solid rgba(255, 176, 0, 0.2);
+}
+
+.vizPanel {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.canvasWrap {
+  width: 100%;
+  aspect-ratio: 16/10;
+  min-height: 200px;
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 65, 0.05) 0%, transparent 70%);
+}
+
+.caption {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: var(--crt-green);
+  opacity: 0.9;
+  border-top: 1px solid rgba(0, 255, 65, 0.15);
+}
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .canvasWrap {
+    min-height: 180px;
+  }
+}

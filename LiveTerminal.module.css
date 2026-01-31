@@ -1,0 +1,89 @@
+.section {
+  border-top: 1px solid rgba(0, 255, 65, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 255, 65, 0.06);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.15);
+  font-size: 0.8rem;
+}
+
+.title {
+  color: var(--crt-amber);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.hint {
+  color: var(--crt-green);
+  opacity: 0.7;
+}
+
+.body {
+  padding: 1rem;
+  min-height: 160px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.output {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.inputLine {
+  color: var(--crt-amber);
+  margin-bottom: 0.25rem;
+}
+
+.outputLine {
+  color: var(--crt-green);
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.promptChar {
+  color: var(--crt-amber);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  color: var(--crt-green);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--crt-green);
+  opacity: 0.4;
+}
+
+.cursor {
+  color: var(--crt-green);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

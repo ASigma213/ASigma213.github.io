@@ -1,0 +1,95 @@
+.section {
+  padding: 2rem;
+  border-top: 1px solid rgba(0, 255, 65, 0.15);
+}
+
+.heading {
+  font-size: 1.25rem;
+  color: var(--crt-amber);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 4px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cardLabel {
+  font-size: 0.8rem;
+  color: var(--crt-amber);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardValue {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--crt-green);
+  text-shadow: 0 0 10px var(--crt-glow);
+}
+
+.bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(0, 255, 65, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.shield {
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.shieldIcon {
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.05); }
+}
+
+.ring {
+  width: 80px;
+  height: 80px;
+}
+
+.ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ringBg {
+  fill: none;
+  stroke: rgba(0, 255, 65, 0.2);
+  stroke-width: 3;
+}
+
+.ringFill {
+  fill: none;
+  stroke: var(--crt-green);
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.5s ease;
+}

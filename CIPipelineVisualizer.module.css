@@ -1,0 +1,134 @@
+.section {
+  padding: 2rem;
+  border-top: 1px solid rgba(0, 255, 65, 0.15);
+}
+
+.heading {
+  font-size: 1.25rem;
+  color: var(--crt-amber);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.sub {
+  font-size: 0.85rem;
+  color: var(--crt-green);
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+.pipeline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 1rem;
+}
+
+.stageWrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(0, 255, 65, 0.06);
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 4px;
+  color: var(--crt-green);
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.stage:hover {
+  background: rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 16px rgba(0, 255, 65, 0.15);
+}
+
+.stage.active {
+  border-color: var(--crt-amber);
+  box-shadow: 0 0 20px rgba(255, 176, 0, 0.2);
+  background: rgba(255, 176, 0, 0.08);
+}
+
+.stage.failed {
+  border-color: var(--vuln-red);
+  background: rgba(255, 51, 51, 0.08);
+  color: var(--vuln-red);
+}
+
+.stage.past {
+  opacity: 0.7;
+}
+
+.icon {
+  font-size: 1rem;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  background: rgba(0, 255, 65, 0.2);
+  border-radius: 2px;
+  margin-left: 0.25rem;
+}
+
+.connector {
+  width: 24px;
+  height: 2px;
+  background: rgba(0, 255, 65, 0.4);
+  margin: 0 4px;
+}
+
+.failBanner {
+  position: absolute;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 51, 51, 0.2);
+  border: 1px solid var(--vuln-red);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  color: var(--vuln-red);
+}
+
+.logPanel {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.logHeader {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 255, 65, 0.08);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.15);
+  font-size: 0.85rem;
+  color: var(--crt-amber);
+}
+
+.logContent {
+  padding: 1rem;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--crt-green);
+  white-space: pre-wrap;
+}
+
+@media (max-width: 600px) {
+  .pipeline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .connector {
+    width: 2px;
+    height: 16px;
+    margin: 0 auto;
+  }
+}
